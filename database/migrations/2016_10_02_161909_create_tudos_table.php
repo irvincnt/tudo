@@ -16,6 +16,7 @@ class CreateTudosTable extends Migration
         Schema::create('tudos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('description');
+            $table->boolean('complete')->default(false);
             $table->timestamps();
 
         });
